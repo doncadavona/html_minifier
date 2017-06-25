@@ -1,7 +1,7 @@
 {
     "name": "DonCadavona/HtmlMinifier",
     "type": "library",
-    "description": "Minifies HTMLs, CSSs and Javascripts.",
+    "description": "A PHP package to minify HTMLs, CSSs and Javascripts.",
     "keywords": [
         "html_minifier",
         "html",
