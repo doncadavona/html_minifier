@@ -1,5 +1,5 @@
 {
-    "name": "doncadavona/html_minifier",
+    "name": "DonCadavona/HtmlMinifier",
     "type": "library",
     "description": "Minifies HTMLs, CSSs and Javascripts.",
     "keywords": [
@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            ":vendor\\:package_name\\": "src"
+            "DonCadavona\\HtmlMinifier\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            ":vendor\\:package_name\\": "tests"
+            "DonCadavona\\HtmlMinifier\\": "tests"
         }
     },
     "scripts": {

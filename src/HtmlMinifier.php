@@ -1,8 +1,8 @@
 <?php
 
-namespace League\Skeleton;
+namespace DonCadavona\HtmlMinifier;
 
-class SkeletonClass
+class HtmlMinifier
 {
     /**
      * Create a new Skeleton Instance
