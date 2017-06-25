@@ -1,18 +1,26 @@
 {
-    "name": ":vendor/:package_name",
+    "name": "doncadavona/html_minifier",
     "type": "library",
-    "description": ":package_description",
+    "description": "Minifies HTMLs, CSSs and Javascripts.",
     "keywords": [
-        ":vendor",
-        ":package_name"
+        "html_minifier",
+        "html",
+        "css",
+        "javascript",
+        "minification",
+        "minify",
+        "minimize",
+        "minifier",
+        "compress",
+        "compressor"
     ],
-    "homepage": "https://github.com/:vendor/:package_name",
+    "homepage": "https://github.com/doncadavona/html_minifier",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Don Cadavona",
+            "email": "dcadavona@gmail.com",
+            "homepage": "https://github.com/doncadavona",
             "role": "Developer"
         }
     ],
