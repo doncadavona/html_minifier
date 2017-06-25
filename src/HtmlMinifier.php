@@ -26,10 +26,12 @@ class HtmlMinifier
 
     /**
      * Returns a minified version of the given HTML.
-     * @param  string $html The original HTML.
-     * @return string       The minified version of the given HTML.
+     * @param  string  $html       The original HTML.
+     * @param  boolean $remove_css Defines whether to remove CSS or not.
+     * @param  boolean $remove_js  Defines whether to remove Javascripts or not.
+     * @return string              The minified version of the given HTML.
      */
-    public function minify($html)
+    public function minify($html, $remove_js = false, $remove_css = false)
     {
         /**
          * The set of regular expressions to match against
@@ -51,6 +53,19 @@ class HtmlMinifier
             // collapse new lines
             '/(\r?\n)/u' => '',
         ];
+
+        // Add javascript remover if specified.
+        if ($remove_js) {
+            $filters['/<script\b[^>]*>([\s\S]*?)<\/script>/'] = '';
+            
+            // Unset the javascript comments remover when the entire script is already removed.
+            unset($filters['/(?:<script[^>]*>|\G(?!\A))(?:[^\'"\/<]+|"(?:[^\\"]+|\\.)*"|\'(?:[^\\\']+|\\.)*\'|\/(?!\/)|<(?!\/script))*+\K\/\/[^\n|<]*/xsu']);
+        }
+
+        // Add CSS remover if specified.
+        if ($remove_css) {
+            $filters['/<style\b[^>]*>([\s\S]*?)<\/style>/'] = '';
+        }
 
         return preg_replace(array_keys($filters), array_values($filters), $html);
     }
