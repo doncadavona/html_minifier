@@ -1,6 +1,6 @@
 # This is a work in Progress
 
-# :package_name
+#  HTML Minifier
 
 [![Latest Version on Packagist][ico-version]][link-packagist]
 [![Software License][ico-license]](LICENSE.md)
@@ -14,32 +14,60 @@
 This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
 PSRs you support to avoid any confusion with users and contributors.
 
-## Structure
-
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
-```
-bin/        
-config/
-src/
-tests/
-vendor/
-```
-
-
 ## Install
 
 Via Composer
 
 ``` bash
-$ composer require :vendor/:package_name
+$ composer require doncadavona/html_minifier
 ```
 
 ## Usage
 
 ``` php
-$skeleton = new League\Skeleton();
-echo $skeleton->echoPhrase('Hello, League!');
+use DonCadavona\HtmlMinifier\HtmlMinifier;
+
+// Sample HTML string
+$html = '
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		html {
+			padding-top: 20px;
+		}
+		body {
+			margin: 0px;
+		}
+	</style>
+</head>
+<body>
+	<h1>Hello World</h1>
+	<script>
+		// This is single-line a comment.
+		/* This is a
+		multi-line 
+		comment. */
+		/**
+		 * This is a doc block comment.
+		 */
+	</script>
+</body>
+</html>
+';
+
+// Minify the HTML
+echo HtmlMinifier::minify($html);
+
+// <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title><style type="text/css"> html { padding-top: 20px; } body { margin: 0px; } </style></head><body><h1>Hello World</h1><script></script></body></html>
+
+// Minify the HTML and remove JavaScripts and CSSs:
+echo HtmlMinifier::minify($html, true, true);
+
+// <!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><title>Document</title></head><body><h1>Hello World</h1></body></html>
+
 ```
 
 ## Change log
@@ -58,12 +86,11 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 
 ## Security
 
-If you discover any security related issues, please email :author_email instead of using the issue tracker.
+If you discover any security related issues, please email `dcadavona@gmail.com` instead of using the issue tracker.
 
 ## Credits
 
-- [:author_name][link-author]
-- [All Contributors][link-contributors]
+- [Oleg Gheorghita](https://github.com/smilemd) for his [yii2-htmlcompress](https://github.com/smilemd/yii2-htmlcompress) package.
 
 ## License
 
