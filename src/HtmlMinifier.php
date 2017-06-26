@@ -31,7 +31,7 @@ class HtmlMinifier
      * @param  boolean $remove_js  Defines whether to remove Javascripts or not.
      * @return string              The minified version of the given HTML.
      */
-    public function minify($html, $remove_js = false, $remove_css = false)
+    public static function minify($html, $remove_js = false, $remove_css = false)
     {
         /**
          * The set of regular expressions to match against
