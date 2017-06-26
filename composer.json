@@ -1,5 +1,5 @@
 {
-    "name": "DonCadavona/HtmlMinifier",
+    "name": "doncadavona/html_minifier",
     "type": "library",
     "description": "A PHP package to minify HTMLs, CSSs and Javascripts.",
     "keywords": [
@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "doncadavona\\htmlminifier\\": "src"
+            "DonCadavona\\HtmlMinifier\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "doncadavona\\htmlminifier\\": "tests"
+            "DonCadavona\\HtmlMinifier\\": "tests"
         }
     },
     "scripts": {
