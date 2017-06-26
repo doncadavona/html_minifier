@@ -38,7 +38,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "doncadavona\\htmlminifierer\\": "tests"
+            "doncadavona\\htmlminifier\\": "tests"
         }
     },
     "scripts": {
