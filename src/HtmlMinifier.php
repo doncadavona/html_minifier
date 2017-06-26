@@ -13,18 +13,6 @@ class HtmlMinifier
     }
 
     /**
-     * Friendly welcome
-     *
-     * @param string $phrase Phrase to return
-     *
-     * @return string Returns the phrase passed in
-     */
-    public function echoPhrase($phrase)
-    {
-        return $phrase;
-    }
-
-    /**
      * Returns a minified version of the given HTML.
      * @param  string  $html       The original HTML.
      * @param  boolean $remove_css Defines whether to remove CSS or not.
