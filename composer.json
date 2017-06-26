@@ -33,12 +33,12 @@
     },
     "autoload": {
         "psr-4": {
-            "DonCadavona\\HtmlMinifier\\": "src"
+            "doncadavona\\htmlminifier\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "DonCadavona\\HtmlMinifier\\": "tests"
+            "doncadavona\\htmlminifierer\\": "tests"
         }
     },
     "scripts": {
